@@ -1,12 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// 入口JS
+import React from 'react'
+import ReactDom from 'react-dom'
+// import 'antd/dist/antd.css'
+import App from './App'
+import strage from './utils/storage'
+import memeryUtils from './utils/memeryUtils'
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+// import moment from 'moment';
+// import 'moment/locale/zh-cn';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+memeryUtils.user = strage.getUser("USER_INFO")
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// 将根组件渲染到index.html的root div上
+ReactDom.render(
+    <ConfigProvider locale={zhCN}>
+        <App></App>
+    </ConfigProvider>,
+    document.getElementById("root"))
