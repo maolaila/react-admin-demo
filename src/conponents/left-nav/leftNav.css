@@ -1,0 +1,11 @@
+.left-nav .left-nav-head {
+  text-align: center;
+  background-color: #1DA57A;
+}
+.left-nav .left-nav-head h1 {
+  color: #fff;
+  font-size: 24px;
+  height: 64px;
+  line-height: 64px;
+  background-color: blue;
+}

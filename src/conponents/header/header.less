@@ -1,0 +1,41 @@
+.header {
+    background-color: lightgreen;
+    overflow: hidden;
+    
+    height: 64px;
+    .header-top {
+        padding: 0 50px;
+        border-bottom: 1px solid #fff;
+        overflow: hidden;
+        height: 32px;
+        .header-info {
+            float: right;
+            height: 32px;
+            line-height: 32px;
+            :nth-child(3) {
+                color:blue;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .header-bottom {
+        padding: 0 50px;
+        height: 32px;
+        display: flex;
+        .header-title{
+            width: 25%;
+            text-align: center;
+
+        }
+        .header-time {
+            width: 75%;
+            text-align: right;
+        }
+        .header-title,
+        .header-time {
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+}
